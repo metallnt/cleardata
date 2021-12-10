@@ -1,0 +1,6 @@
+name: ClearData
+version: '${project.version}'
+main: com.github.metallnt.cleardata.ClearData
+api-version: 1.16
+authors: [ Metall ]
+website: https://github.com/metallnt
