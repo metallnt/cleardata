@@ -1,7 +1,6 @@
 package com.github.metallnt.cleardata.configs;
 
 import com.github.metallnt.cleardata.ClearData;
-import com.sun.webkit.plugin.Plugin;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
