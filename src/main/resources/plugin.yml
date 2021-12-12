@@ -4,3 +4,4 @@ main: com.github.metallnt.cleardata.ClearData
 api-version: 1.16
 authors: [ Metall ]
 website: https://github.com/metallnt
+description: Plugin for clear old data other plugins

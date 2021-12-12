@@ -1,0 +1,23 @@
+# # # # # # # # # # # # # # # #
+#                             #
+#          НАСТРОЙКИ          #
+#                             #
+# # # # # # # # # # # # # # # #
+
+#Очистка при событии
+listeners:
+#  Смерть игрока
+  dead_player: false
+#  Комманда на очистку всего
+  command: false
+
+# Список очищаемых плагинов
+plugins:
+  autorank: false
+  essentials: false
+  luckperms: false
+  mcmmo: false
+  protectionstones: false
+  statz: false
+  towny: false
+  worldguard: false
