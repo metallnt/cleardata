@@ -5,7 +5,6 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ConcurrentModificationException;
 
@@ -20,7 +19,7 @@ public class YamlConfig extends YamlConfiguration {
     File file;
 
     // Create New YAML File
-    public YamlConfig(final ClearData plugin, final String fileName, final String name) throws InvalidConfigurationException {
+    public YamlConfig(final ClearData plugin, final String fileName) throws InvalidConfigurationException {
         final String folderPath = plugin.getDataFolder().getAbsolutePath() + File.separator;
         file = new File(folderPath + fileName);
 

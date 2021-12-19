@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 /**
  * Class com.github.metallnt.cleardata.configs
- * <p>
+ *
  * Date: 11.12.2021 10:48 11 12 2021
  *
  * @author Metall

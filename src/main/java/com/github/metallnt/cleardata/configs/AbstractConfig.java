@@ -1,12 +1,13 @@
 package com.github.metallnt.cleardata.configs;
 
 import com.github.metallnt.cleardata.ClearData;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 
 /**
  * Class com.github.metallnt.cleardata.configs
- * <p>
+ *
  * Date: 10.12.2021 16:38 10 12 2021
  *
  * @author Metall
@@ -21,8 +22,8 @@ public class AbstractConfig {
 
     // Create New config file
     public void createNewFile() throws InvalidConfigurationException {
-        configFile = new YamlConfig(plugin, fileName, fileName);
-        plugin.getServer().getConsoleSender().sendMessage("File loaded (" + fileName + ")");
+        configFile = new YamlConfig(plugin, fileName);
+        plugin.getServer().getConsoleSender().sendMessage("File loaded (" + fileName + ") 2");
     }
 
     // Get YAML file

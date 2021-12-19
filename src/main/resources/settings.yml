@@ -4,20 +4,14 @@
 #                             #
 # # # # # # # # # # # # # # # #
 
-#Очистка при событии
-listeners:
-#  Смерть игрока
-  dead_player: false
-#  Комманда на очистку всего
-  command: false
 
-# Список очищаемых плагинов
-plugins:
-  autorank: false
-  essentials: false
-  luckperms: false
-  mcmmo: false
-  protectionstones: false
-  statz: false
-  towny: false
-  worldguard: false
+#  Срок оффлайна в месяцах
+period_old: 12
+# Очистка при смерти игрока
+dead_player: false
+# Очистка при перезагрузке
+reboot: false
+
+# Белый список игроков (исключения)
+whitelist:
+  - SovietUnion

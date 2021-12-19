@@ -5,10 +5,11 @@ import com.github.metallnt.cleardata.ClearData;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Class com.github.metallnt.cleardata.configs
- * <p>
+ *
  * Date: 11.12.2021 9:53 11 12 2021
  *
  * @author Metall
@@ -42,4 +43,19 @@ public class SettingsConfig extends AbstractConfig {
     }
 
     // More get values key from config
+    public boolean getCheckReboot() {
+        return this.getConfig().getBoolean("reboot", true);
+    }
+
+    public boolean getCheckDeadPlayer() {
+        return this.getConfig().getBoolean("dead_player", true);
+    }
+
+    public int getPeriod() {
+        return this.getConfig().getInt("period_oil");
+    }
+
+    public List<String> getWhiteList() {
+        return this.getConfig().getStringList("whitelist");
+    }
 }
