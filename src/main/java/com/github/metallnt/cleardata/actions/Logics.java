@@ -58,5 +58,9 @@ public class Logics {
         if (Bukkit.getPluginManager().isPluginEnabled("LiteBans")) {
             plugin.getLiteBansGenerator().make(playerName);
         }
+
+        if (Bukkit.getPluginManager().isPluginEnabled("McMMO")) {
+            plugin.getMcMmoClear().clear(playerName);
+        }
     }
 }

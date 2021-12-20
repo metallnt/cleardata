@@ -78,4 +78,8 @@ public class SettingsConfig extends AbstractConfig {
     public int getMaxTime() {
         return this.getConfig().getInt("max_time");
     }
+
+    public boolean getMcMmo() {
+        return this.getConfig().getBoolean("mcmmo", true);
+    }
 }

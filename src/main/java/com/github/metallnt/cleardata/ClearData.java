@@ -2,10 +2,7 @@ package com.github.metallnt.cleardata;
 
 import com.github.metallnt.cleardata.Listeners.PlayerDeathListener;
 import com.github.metallnt.cleardata.Listeners.RebootListener;
-import com.github.metallnt.cleardata.actions.AutorankClear;
-import com.github.metallnt.cleardata.actions.LiteBansGenerator;
-import com.github.metallnt.cleardata.actions.Logics;
-import com.github.metallnt.cleardata.actions.LuckPermsClear;
+import com.github.metallnt.cleardata.actions.*;
 import com.github.metallnt.cleardata.configs.SettingsConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,6 +19,7 @@ public final class ClearData extends JavaPlugin {
     private AutorankClear autorankClear;
     private LuckPermsClear luckPermsClear;
     private LiteBansGenerator liteBansGenerator;
+    private McMmoClear mcMmoClear;
 
     public static ClearData getInstance() {
         return cleardata;
@@ -125,5 +123,13 @@ public final class ClearData extends JavaPlugin {
 
     public void setLiteBansGenerator(LiteBansGenerator liteBansGenerator) {
         this.liteBansGenerator = liteBansGenerator;
+    }
+
+    public McMmoClear getMcMmoClear() {
+        return mcMmoClear;
+    }
+
+    public void setMcMmoClear(McMmoClear mcMmoClear) {
+        this.mcMmoClear = mcMmoClear;
     }
 }

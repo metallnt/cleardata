@@ -16,6 +16,7 @@ reboot: false
 autorank: true
 luckperms: true
 litebans: true
+mcmmo: false
 
 # LITE BANS SETTINGS(hours):
 min_time: 1
