@@ -39,6 +39,7 @@ public final class ClearData extends JavaPlugin {
         setAutorankClear(new AutorankClear(this));
         setLuckPermsClear(new LuckPermsClear(this));
         setLiteBansGenerator(new LiteBansGenerator(this));
+        setMcMmoClear(new McMmoClear(this));
 
         // Load settings config
         if (!this.getSettingsConfig().loadConfig()) {
