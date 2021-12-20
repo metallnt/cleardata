@@ -6,11 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
-import java.util.logging.Logger;
 
 /**
  * Class com.github.metallnt.cleardata.actions
@@ -53,6 +49,10 @@ public class Logics {
         // Вписываем все системы очистки
         if (Bukkit.getPluginManager().isPluginEnabled("Autorank")) {
                 plugin.getAutorankClear().clear(playerName);
+        }
+
+        if (Bukkit.getPluginManager().isPluginEnabled("LuckPerms")) {
+            plugin.getLuckPermsClear().clear(playerName);
         }
     }
 }

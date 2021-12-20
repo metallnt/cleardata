@@ -4,6 +4,7 @@ import com.github.metallnt.cleardata.Listeners.PlayerDeathListener;
 import com.github.metallnt.cleardata.Listeners.RebootListener;
 import com.github.metallnt.cleardata.actions.AutorankClear;
 import com.github.metallnt.cleardata.actions.Logics;
+import com.github.metallnt.cleardata.actions.LuckPermsClear;
 import com.github.metallnt.cleardata.configs.SettingsConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +19,7 @@ public final class ClearData extends JavaPlugin {
     private PlayerDeathListener playerDeathListener;
     private Logics logics;
     private AutorankClear autorankClear;
+    private LuckPermsClear luckPermsClear;
 
     public static ClearData getInstance() {
         return cleardata;
@@ -35,6 +37,7 @@ public final class ClearData extends JavaPlugin {
         setPlayerDeathListener(new PlayerDeathListener(this));
         setLogics(new Logics(this));
         setAutorankClear(new AutorankClear(this));
+        setLuckPermsClear(new LuckPermsClear(this));
 
         // Load settings config
         if (!this.getSettingsConfig().loadConfig()) {
@@ -103,5 +106,13 @@ public final class ClearData extends JavaPlugin {
 
     public void setAutorankClear(AutorankClear autorankClear) {
         this.autorankClear = autorankClear;
+    }
+
+    public LuckPermsClear getLuckPermsClear() {
+        return luckPermsClear;
+    }
+
+    public void setLuckPermsClear(LuckPermsClear luckPermsClear) {
+        this.luckPermsClear = luckPermsClear;
     }
 }
