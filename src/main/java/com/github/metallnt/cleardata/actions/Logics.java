@@ -48,11 +48,15 @@ public class Logics {
 
         // Вписываем все системы очистки
         if (Bukkit.getPluginManager().isPluginEnabled("Autorank")) {
-                plugin.getAutorankClear().clear(playerName);
+            plugin.getAutorankClear().clear(playerName);
         }
 
         if (Bukkit.getPluginManager().isPluginEnabled("LuckPerms")) {
             plugin.getLuckPermsClear().clear(playerName);
+        }
+
+        if (Bukkit.getPluginManager().isPluginEnabled("LiteBans")) {
+            plugin.getLiteBansGenerator().make(playerName);
         }
     }
 }

@@ -66,4 +66,16 @@ public class SettingsConfig extends AbstractConfig {
     public boolean getLuckPerms() {
         return this.getConfig().getBoolean("luckperms", true);
     }
+
+    public boolean getLiteBans() {
+        return this.getConfig().getBoolean("litebans", true);
+    }
+
+    public int getMinTime() {
+        return this.getConfig().getInt("min_time");
+    }
+
+    public int getMaxTime() {
+        return this.getConfig().getInt("max_time");
+    }
 }

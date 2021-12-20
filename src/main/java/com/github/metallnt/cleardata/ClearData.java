@@ -3,6 +3,7 @@ package com.github.metallnt.cleardata;
 import com.github.metallnt.cleardata.Listeners.PlayerDeathListener;
 import com.github.metallnt.cleardata.Listeners.RebootListener;
 import com.github.metallnt.cleardata.actions.AutorankClear;
+import com.github.metallnt.cleardata.actions.LiteBansGenerator;
 import com.github.metallnt.cleardata.actions.Logics;
 import com.github.metallnt.cleardata.actions.LuckPermsClear;
 import com.github.metallnt.cleardata.configs.SettingsConfig;
@@ -20,6 +21,7 @@ public final class ClearData extends JavaPlugin {
     private Logics logics;
     private AutorankClear autorankClear;
     private LuckPermsClear luckPermsClear;
+    private LiteBansGenerator liteBansGenerator;
 
     public static ClearData getInstance() {
         return cleardata;
@@ -38,6 +40,7 @@ public final class ClearData extends JavaPlugin {
         setLogics(new Logics(this));
         setAutorankClear(new AutorankClear(this));
         setLuckPermsClear(new LuckPermsClear(this));
+        setLiteBansGenerator(new LiteBansGenerator(this));
 
         // Load settings config
         if (!this.getSettingsConfig().loadConfig()) {
@@ -114,5 +117,13 @@ public final class ClearData extends JavaPlugin {
 
     public void setLuckPermsClear(LuckPermsClear luckPermsClear) {
         this.luckPermsClear = luckPermsClear;
+    }
+
+    public LiteBansGenerator getLiteBansGenerator() {
+        return liteBansGenerator;
+    }
+
+    public void setLiteBansGenerator(LiteBansGenerator liteBansGenerator) {
+        this.liteBansGenerator = liteBansGenerator;
     }
 }
