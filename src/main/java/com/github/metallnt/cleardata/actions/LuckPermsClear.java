@@ -19,7 +19,11 @@ public class LuckPermsClear {
     }
 
     public void clear(String player) {
-        Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "lp user " + player + " clear");
-        plugin.getServer().getConsoleSender().sendMessage("Из плагина LuckPerms удалены данные игрока " + player);
+        if (plugin.getSettingsConfig().getLuckPerms()) {
+            Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "lp user " + player + " clear");
+            plugin.getServer().getConsoleSender().sendMessage("Из плагина LuckPerms удалены данные игрока " + player);
+        } else {
+            plugin.getServer().getConsoleSender().sendMessage("Очистка данных LuckPerms отключена в конфиге");
+        }
     }
 }

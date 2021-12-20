@@ -21,13 +21,17 @@ public class AutorankClear {
     }
 
     public void clear(String player) {
-        Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "autorank gset " + player + " 0");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Воин");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Шахтер");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Плотник");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Мастер");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Маг");
-        Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Кузнец");
-        plugin.getServer().getConsoleSender().sendMessage("Из плагина Autorank удалены данные игрока " + player);
+        if (plugin.getSettingsConfig().getAutorank()) {
+            Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "autorank gset " + player + " 0");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Воин");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Шахтер");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Плотник");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Мастер");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Маг");
+            Bukkit.getServer().dispatchCommand(Objects.requireNonNull(Bukkit.getServer().getPlayer(player)), "autorank deactivate Кузнец");
+            plugin.getServer().getConsoleSender().sendMessage("Из плагина Autorank удалены данные игрока " + player);
+        } else {
+            plugin.getServer().getConsoleSender().sendMessage("Очистка Autorank отключена в конфиге");
+        }
     }
 }

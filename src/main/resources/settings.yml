@@ -12,6 +12,10 @@ dead_player: false
 # Очистка при перезагрузке
 reboot: false
 
+# Список плагинов для очистки
+autorank: true
+luckperms: true
+
 # Белый список игроков (исключения)
 whitelist:
   - SovietUnion

@@ -58,4 +58,12 @@ public class SettingsConfig extends AbstractConfig {
     public List<String> getWhiteList() {
         return this.getConfig().getStringList("whitelist");
     }
+
+    public boolean getAutorank() {
+        return this.getConfig().getBoolean("autorank", true);
+    }
+
+    public boolean getLuckPerms() {
+        return this.getConfig().getBoolean("luckperms", true);
+    }
 }
